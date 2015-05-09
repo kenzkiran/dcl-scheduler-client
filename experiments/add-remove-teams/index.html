@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <title> DCL Client </title>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myCtrl">
+    <h1> Example of my-deletable directive which adds a delete button  </h1>
+    <button class="btn btn-primary btn-sm" style="margin: 5px" ng-click="add()"> + </button><input type="text" ng-model="newbie">  </input>
+    <div class="container-fluid">
+            <div class="col-md-12" team="team" on-close="deleteEntry(team)" my-deletable ng-repeat="team in teams"> {{team}} </div>
+    </div>
+</div>
+
+<script src="js/main.js"> </script>
+</body>
+</html>
