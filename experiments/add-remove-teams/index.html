@@ -16,27 +16,28 @@
                  <button class="btn btn-info btn-sm btn-block" ng-click="open()"> ADD TEAM </button>
                  <button class="btn btn-primary btn-sm btn-block"> ADD GROUND </button>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9" ng-controller="myCtrl">
                 <div class="container">
                     <div class="row text-left"> <h2> Teams </h2> </div>
                     <div class="row">
-                        <p class="text-left"> Team A </p>
-                        <p class="text-left"> Team B </p>
+                        <h3 class="text-left" team="team.name" on-close="deleteEntry(team)" ng-repeat="team in teams" my-deletable> {{team.name}}    {{team.captain}}  {{team.loc}}</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!--
     <h1> Example of my-deletable directive which adds a delete button  </h1>
-    <button class="btn btn-primary btn-sm" style="margin: 5px" ng-click="add()"> + </button><input type="text" ng-model="newbie">  </input>
     <div class="container-fluid">
             <div class="col-md-12" team="team" on-close="deleteEntry(team)" my-deletable ng-repeat="team in teams"> {{team}} </div>
     </div>
+    -->
 </div>
 
 <script src="js/main.js"> </script>
 <script src="js/team.js"> </script>
 <script src="js/add-team-ctrl.js"> </script>
+<script src="js/my-deletable-directive.js"> </script>
 </body>
 </html>

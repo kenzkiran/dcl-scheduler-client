@@ -9,11 +9,12 @@ app.factory('TeamList', function() {
    };
 
     var TeamList = {
+        locations: ['plano', 'allen', 'richardson'],
         teams: [],
         getIndex: function(teamName) {
             var teams = this.teams;
             for(var i = 0; i < teams.length; ++i) {
-                if (teams.name === teamName) {
+                if (teams[i].name === teamName) {
                     return i;
                 }
             }
@@ -23,6 +24,7 @@ app.factory('TeamList', function() {
             var teams = this.teams;
             var index = this.getIndex(newTeam.name);
             if (index === -1) {
+                console.log("TeamList: Adding team: " + newTeam.name);
                 teams.push(newTeam);
             }
         },
@@ -30,6 +32,7 @@ app.factory('TeamList', function() {
             var teams = this.teams;
             var index = this.getIndex(remTeamName);
             if (index !== -1) {
+                console.log("TeamList: Removing team: " + remTeamName);
                 teams.splice(index, 1);
             }
         }

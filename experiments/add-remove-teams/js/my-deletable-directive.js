@@ -1,13 +1,12 @@
 var myApp = angular.module('myApp');
 
 myApp.controller('myCtrl', function($scope, TeamList) {
-    $scope.teams = TeamList.teams;
-    $scope.newbie = ''
-    $scope.add = function() {
-        console.log("Adding entry: " +  $scope.newbie);
-    };
-    $scope.deleteEntry = function(team) {
-        console.log("Deleting entry: " + team);
+    $scope.TeamList = TeamList;
+    $scope.teams = $scope.TeamList.teams;
+
+    $scope.deleteEntry = function(teamName) {
+        console.log("Deleting entry: " + teamName);
+        $scope.TeamList.removeTeam(teamName);
     }
 });
 
