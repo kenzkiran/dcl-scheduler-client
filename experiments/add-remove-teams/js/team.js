@@ -3,7 +3,7 @@ var app = angular.module('myApp');
 app.factory('TeamList', function() {
    function Team(name, loc, captain) {
        this.name = name;
-       this.loc = loc || 'unknown-loc';
+       this.loc = loc || 'planet-earth';
        this.captain = captain || 'captain-kirk';
        this.toString = function(){ return this.name + ' ' + this.captain}
    };
@@ -39,6 +39,6 @@ app.factory('TeamList', function() {
     };
 
     TeamList.addTeam(new Team('Team A'));
-    TeamList.addTeam(new Team('Team B'));
+    TeamList.addTeam(new Team('Team B', 'planet-saturn', 'captain-spock'));
     return TeamList;
 });

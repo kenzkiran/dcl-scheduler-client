@@ -20,19 +20,12 @@
                 <div class="container">
                     <div class="row text-left"> <h2> Teams </h2> </div>
                     <div class="row">
-                        <h3 class="text-left" team="team.name" on-close="deleteEntry(team)" ng-repeat="team in teams" my-deletable> {{team.name}}    {{team.captain}}  {{team.loc}}</h3>
+                        <h3 class="text-left" team="team.name" on-close="deleteEntry(team)" ng-repeat="team in teams" my-deletable> {{team.name}} : {{team.captain}} : {{team.loc}}</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!--
-    <h1> Example of my-deletable directive which adds a delete button  </h1>
-    <div class="container-fluid">
-            <div class="col-md-12" team="team" on-close="deleteEntry(team)" my-deletable ng-repeat="team in teams"> {{team}} </div>
-    </div>
-    -->
 </div>
 
 <script src="js/main.js"> </script>
