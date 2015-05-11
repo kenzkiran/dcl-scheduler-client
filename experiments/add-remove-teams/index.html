@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <title> DCL Client </title>
+    <script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+    <title> DCL Scheduler  </title>
 </head>
 <body ng-app="myApp">
-<div ng-controller="myCtrl">
+<div>
+    <div class="container">
+        <div class="row"> <h1 class="text-center"> DCL Scheduler </h1> </div>
+        <div class="row">
+            <div class="col-md-3" ng-controller="AddTeamModalCtrl">
+                 <button class="btn btn-info btn-sm btn-block" ng-click="open()"> ADD TEAM </button>
+                 <button class="btn btn-primary btn-sm btn-block"> ADD GROUND </button>
+            </div>
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="row text-left"> <h2> Teams </h2> </div>
+                    <div class="row">
+                        <p class="text-left"> Team A </p>
+                        <p class="text-left"> Team B </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h1> Example of my-deletable directive which adds a delete button  </h1>
     <button class="btn btn-primary btn-sm" style="margin: 5px" ng-click="add()"> + </button><input type="text" ng-model="newbie">  </input>
     <div class="container-fluid">
@@ -16,5 +36,7 @@
 </div>
 
 <script src="js/main.js"> </script>
+<script src="js/team.js"> </script>
+<script src="js/add-team-ctrl.js"> </script>
 </body>
 </html>
