@@ -14,7 +14,6 @@ angular.module('myApp').controller('AddTeamModalCtrl', function ($scope, $modal,
                 }
             }
         });
-
         modalInstance.result.then(function (newTeam) {
             console.log("Ravi: new team" + JSON.stringify(newTeam));
             $scope.teamList.addTeam(newTeam);

@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dcl-scheduler.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
     <title> DCL Scheduler  </title>
@@ -17,10 +18,15 @@
                  <button class="btn btn-primary btn-sm btn-block"> ADD GROUND </button>
             </div>
             <div class="col-md-9" ng-controller="myCtrl">
-                <div class="container">
+                <div class="container" id="dclscheduler">
                     <div class="row text-left"> <h2> Teams </h2> </div>
-                    <div class="row">
-                        <h3 class="text-left" team="team.name" on-close="deleteEntry(team)" ng-repeat="team in teams" my-deletable> {{team.name}} : {{team.captain}} : {{team.loc}}</h3>
+
+                        <ul >
+                            <li item="team.name" on-delete="deleteEntry(item)" ng-repeat="team in teams" ptf-deletable>
+                                 <p class="text-left"> {{team.name}} : {{team.captain}} : {{team.loc}}</p>
+                            </li>
+                        </ul>
+                        <!-- <h3 class="text-left" item="team.name" on-delete="deleteEntry(item)" ng-repeat="team in teams" ptf-deletable> {{team.name}} : {{team.captain}} : {{team.loc}}</h3> -->
                     </div>
                 </div>
             </div>
@@ -31,6 +37,6 @@
 <script src="js/main.js"> </script>
 <script src="js/team.js"> </script>
 <script src="js/add-team-ctrl.js"> </script>
-<script src="js/my-deletable-directive.js"> </script>
+<script src="js/ptf-deletable-directive.js"> </script>
 </body>
 </html>

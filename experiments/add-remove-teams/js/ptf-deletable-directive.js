@@ -10,16 +10,20 @@ myApp.controller('myCtrl', function($scope, TeamList) {
     }
 });
 
-myApp.directive('myDeletable', function() {
+/***
+ * ptfDeletable will add a hover delete button on any element enclosing.
+ *
+ */
+myApp.directive('ptfDeletable', function() {
     console.log("Adding directive");
     return {
         restrict: 'A',
         transclude: true,
         scope: {
-            'team': '=',
-            'close': '&onClose'
+            'item': '=',
+            'delete': '&onDelete'
         },
-        templateUrl: 'templates/my-deletable.html'
+        templateUrl: 'templates/ptf-deletable.html'
     };
 });
 
