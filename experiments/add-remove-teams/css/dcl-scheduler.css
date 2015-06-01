@@ -1,10 +1,87 @@
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
 
-#dclscheduler li .destroy {
-    display: none;
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+#dclstyle .dclcard {
+    min-width: 256px;
+    max-width: 550px;
+    -moz-box-shadow: 10px 10px 5px #3d3d3d;
+    -webkit-box-shadow: 10px 10px 5px #3d3d3d;
+    box-shadow: 5px 5px 5px #3d3d3d;
+}
+
+#dclstyle .title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    border-bottom: 2px solid #ededed;
+}
+
+#dclstyle ul {
+    list-style-type: none;
+    padding: 5px;
+}
+#dclsytle .dcl-list {
+    margin: 0;
+    padding: 0;
+}
+
+.dcl-list .item {
+    height: 40px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+#dclstyle .dcl-list li {
     position: relative;
-    float: left;
-    font-size: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #ededed;
+}
+
+#dclstyle li .destroy {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    margin: auto 0;
+    font-size: 25px;
+    color: #cc9a9a;
+    margin-bottom: 11px;
     transition: color 0.2s ease-out;
+}
+
+#dclstyle li .destroy:hover {
+    color: #af5b5e;
+}
+
+#dclstyle li .destroy:after {
+    content: '×';
+}
+
+#dclstyle li:hover .destroy {
+    display: block;
 }
 
 #dclscheduler ul { list-style-type: none;}
