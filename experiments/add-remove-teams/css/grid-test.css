@@ -1,0 +1,28 @@
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    margin-bottom: 5px;
+    border: solid darkgray 1px;
+}
+
+.child {
+    margin-bottom: 1px;
+    border-right: solid darkgrey 1px;
+    border-bottom: solid darkgrey 1px;
+}
+
+#test1 {
+    background-color: #999999;
+}
+
+#test2 {
+    background-color: #8aa4be;
+}
+
+#test3 {
+    background-color: #cc9a9a;
+}

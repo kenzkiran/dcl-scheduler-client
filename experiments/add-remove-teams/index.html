@@ -10,26 +10,26 @@
 </head>
 <body ng-app="myApp">
 <div>
-    <div class="container">
+    <div id="dclstyle" class="container">
         <div class="row"> <h1 class="text-center"> DCL Scheduler </h1> </div>
-        <div class="row">
-            <div class="col-md-3" ng-controller="AddTeamModalCtrl">
-                 <button class="btn btn-info btn-sm btn-block" ng-click="open()"> ADD TEAM </button>
-                 <button class="btn btn-primary btn-sm btn-block"> ADD GROUND </button>
-            </div>
-            <div class="col-md-9" ng-controller="myCtrl">
-                <div class="container" id="dclscheduler">
-                    <div class="row"> <h2> Teams </h2> </div>
-                    <ul>
-                        <li ng-repeat="team in teams">
-                        <div item="team.name" on-delete="deleteEntry(item)" ptf-deletable>
-                            <p class="text-left"> {{team.name}} : {{team.captain}} : {{team.loc}}</p>
-                        </div>
-                        </li>
-                    </ul>
-                        <!-- <h3 class="text-left" item="team.name" on-delete="deleteEntry(item)" ng-repeat="team in teams" ptf-deletable> {{team.name}} : {{team.captain}} : {{team.loc}}</h3> -->
+        <div class="row dclcard">
+            <div class="row dclcard-title"> <h2> Teams </h2> </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <button class="btn btn-info btn-sm btn-block" ng-controller="AddTeamModalCtrl" ng-click="open()"> ADD TEAM </button>
+                </div>
+                <div class="col-sm-12 col-md-9" ng-controller="myCtrl">
+                    <div class="dcl-list">
+                        <ul>
+                            <li ng-repeat="team in teams">
+                                <div item="team.name" on-delete="deleteEntry(item)" ptf-deletable>
+                                    <label>{{team.name}} : {{team.captain}} : {{team.loc}}</label>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
